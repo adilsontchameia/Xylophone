@@ -9,9 +9,9 @@ void main() {
 }
 
 class Home extends StatelessWidget {
-  void reproduzir() {
+  void reproduzir(int numero) {
     final player = AudioCache();
-    player.play("note1.wav");
+    player.play("note$numero.wav");
   }
 
   @override
@@ -22,52 +22,43 @@ class Home extends StatelessWidget {
           children: [
             FlatButton(
               onPressed: () {
-                reproduzir();
+                reproduzir(1);
               },
-              child: Text(""),
               color: Colors.red,
             ),
             FlatButton(
               onPressed: () {
-                reproduzir();
+                reproduzir(2);
               },
-              child: Text(""),
               color: Colors.yellow,
             ),
             FlatButton(
               onPressed: () {
-                reproduzir();
+                reproduzir(3);
               },
-              child: Text(""),
               color: Colors.purple,
             ),
             FlatButton(
               onPressed: () {
-                reproduzir();
+                reproduzir(4);
               },
               color: Colors.green,
             ),
             FlatButton(
               onPressed: () {
-                reproduzir();
+                reproduzir(5);
               },
               color: Colors.blue,
             ),
             FlatButton(
               onPressed: () {
-                reproduzir();
+                reproduzir(6);
               },
               color: Colors.orange,
             ),
             FlatButton(
               onPressed: () {
-                reproduzir();
-              },
-              color: Colors.cyan,
-            ),
-            FlatButton(
-              onPressed: () {
-                reproduzir();
+                reproduzir(7);
               },
               color: Colors.pink,
             ),
