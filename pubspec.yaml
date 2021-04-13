@@ -48,6 +48,12 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
    - assets/note1.wav
+   - assets/note2.wav
+   - assets/note3.wav
+   - assets/note4.wav
+   - assets/note5.wav
+   - assets/note6.wav
+   - assets/note7.wav
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
