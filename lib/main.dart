@@ -14,6 +14,17 @@ class Home extends StatelessWidget {
     player.play("note$numero.wav");
   }
 
+  Expanded botoes({Color color, int numero}) {
+    return Expanded(
+      child: FlatButton(
+        onPressed: () {
+          reproduzir(numero);
+        },
+        color: color,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,62 +33,13 @@ class Home extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Expanded(
-              child: FlatButton(
-                onPressed: () {
-                  reproduzir(1);
-                },
-                color: Colors.red,
-              ),
-            ),
-            Expanded(
-              child: FlatButton(
-                onPressed: () {
-                  reproduzir(2);
-                },
-                color: Colors.yellow,
-              ),
-            ),
-            Expanded(
-              child: FlatButton(
-                onPressed: () {
-                  reproduzir(3);
-                },
-                color: Colors.purple,
-              ),
-            ),
-            Expanded(
-              child: FlatButton(
-                onPressed: () {
-                  reproduzir(4);
-                },
-                color: Colors.green,
-              ),
-            ),
-            Expanded(
-              child: FlatButton(
-                onPressed: () {
-                  reproduzir(5);
-                },
-                color: Colors.blue,
-              ),
-            ),
-            Expanded(
-              child: FlatButton(
-                onPressed: () {
-                  reproduzir(6);
-                },
-                color: Colors.orange,
-              ),
-            ),
-            Expanded(
-              child: FlatButton(
-                onPressed: () {
-                  reproduzir(7);
-                },
-                color: Colors.pink,
-              ),
-            ),
+            botoes(color: Colors.red, numero: 1),
+            botoes(color: Colors.orange, numero: 2),
+            botoes(color: Colors.green, numero: 3),
+            botoes(color: Colors.purple, numero: 4),
+            botoes(color: Colors.orange, numero: 5),
+            botoes(color: Colors.cyan, numero: 6),
+            botoes(color: Colors.pink, numero: 7),
           ],
         ),
       ),
